@@ -2,16 +2,11 @@
 using namespace std;
 
 int main() {
-    int a=33;
-    int *p;
-
-    p=&a;
-
-    cout<<"stored in p:"<<p<<endl;
-    cout<<"value in a thru p:"<<*p<<endl;
-
-    *p=333;
-
-    cout<<"new value a:"<<*p<<endl;
+int arr[5] = {3,33,333,3333,33333};
+    int *p = arr;
+    for (int i = 0; i < 5; i++) {
+        cout << "address of arr[" <<i<< "]:" <<(p+i) << endl;
+        cout << "value of arr[" <<i<< "]:" << *(p+i) << endl;
+    }
     return 0;
 }
